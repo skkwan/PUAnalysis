@@ -72,7 +72,7 @@ def defaultReconstructionMC(process,triggerProcess = 'HLT',triggerPaths = ['HLT_
   
   #triLeptons(process)
 
-  jetOverloading(process,"slimmedJets",False)
+  jetOverloading(process,"slimmedJetsPuppi",False)
   #MiniAODJES(process,"patOverloadedJets")
 
   jetFilter(process,"JESJets")

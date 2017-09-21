@@ -504,6 +504,36 @@ def addDiTauEventTree(process,name,src = 'diTausOS', srcLL = 'diMuonsOSSorted', 
 			      diTauRawDBIso1 = makeDiTauPair(src,"isoDBRaw_1",'leg1.tauID("byCombinedIsolationDeltaBetaCorrRaw3Hits")'),
 			      diTauRawDBIso2 = makeDiTauPair(src,"isoDBRaw_2",'leg2.tauID("byCombinedIsolationDeltaBetaCorrRaw3Hits")'),
 
+                              diTauIsoLeg1NewCHIso3 =  makeDiTauPair(src,"newCHIso3_1",'leg1.userFloat("newChIso3")'),
+                              diTauIsoLeg2NewCHIso3 =  makeDiTauPair(src,"newCHIso3_2",'leg2.userFloat("newChIso3")'),
+
+                              diTauIsoLeg1NewCHIso4 =  makeDiTauPair(src,"newCHIso4_1",'leg1.userFloat("newChIso4")'),
+                              diTauIsoLeg2NewCHIso4 =  makeDiTauPair(src,"newCHIso4_2",'leg2.userFloat("newChIso4")'),
+
+                              diTauIsoLeg1NewCHIso6 =  makeDiTauPair(src,"newCHIso6_1",'leg1.userFloat("newChIso6")'),
+                              diTauIsoLeg2NewCHIso6 =  makeDiTauPair(src,"newCHIso6_2",'leg2.userFloat("newChIso6")'),
+
+                              diTauIsoLeg1NewCHIso12 =  makeDiTauPair(src,"newCHIso12_1",'leg1.userFloat("newChIso12")'),
+                              diTauIsoLeg2NewCHIso12 =  makeDiTauPair(src,"newCHIso12_2",'leg2.userFloat("newChIso12")'),
+
+                              diTauIsoLeg1NewCHIso18 =  makeDiTauPair(src,"newCHIso18_1",'leg1.userFloat("newChIso18")'),
+                              diTauIsoLeg2NewCHIso18 =  makeDiTauPair(src,"newCHIso18_2",'leg2.userFloat("newChIso18")'),
+
+                              diTauIsoLeg1NewCHiso3_ntracks =  makeDiTauPair(src,"newCHiso3_ntracks_1",'leg1.userFloat("newChIso3_ntracks")'),
+                              diTauIsoLeg2NewCHIso3_ntracks =  makeDiTauPair(src,"newCHIso3_ntracks_2",'leg2.userFloat("newChIso3_ntracks")'),
+
+                              diTauIsoLeg1NewCHIso4_ntracks =  makeDiTauPair(src,"newCHIso4_ntracks_1",'leg1.userFloat("newChIso4_ntracks")'),
+                              diTauIsoLeg2NewCHIso4_ntracks =  makeDiTauPair(src,"newCHIso4_ntracks_2",'leg2.userFloat("newChIso4_ntracks")'),
+
+                              diTauIsoLeg1NewCHIso6_ntracks =  makeDiTauPair(src,"newCHIso6_ntracks_1",'leg1.userFloat("newChIso6_ntracks")'),
+                              diTauIsoLeg2NewCHIso6_ntracks =  makeDiTauPair(src,"newCHIso6_ntracks_2",'leg2.userFloat("newChIso6_ntracks")'),
+
+                              diTauIsoLeg1NewCHIso12_ntracks =  makeDiTauPair(src,"newCHIso12_ntracks_1",'leg1.userFloat("newChIso12_ntracks")'),
+                              diTauIsoLeg2NewCHIso12_ntracks =  makeDiTauPair(src,"newCHIso12_ntracks_2",'leg2.userFloat("newChIso12_ntracks")'),
+
+                              diTauIsoLeg1NewCHIso18_ntracks =  makeDiTauPair(src,"newCHIso18_ntracks_1",'leg1.userFloat("newChIso18_ntracks")'),
+                              diTauIsoLeg2NewCHIso18_ntracks =  makeDiTauPair(src,"newCHIso18_ntracks_2",'leg2.userFloat("newChIso18_ntracks")'),
+
 ####Rerun
 
                               #diTauIsoLeg1ReRun =  makeDiTauPair(src,"isoRerun_1",'leg1.userFloat("byVTightIsolationMVArun2v1DBoldDMwLTRerun")'),
@@ -567,6 +597,14 @@ def addDiTauEventTree(process,name,src = 'diTausOS', srcLL = 'diMuonsOSSorted', 
                               diTauJet2EtaPtSort = makeDiTauPtPair(src,"jeta_2",'abs(eta())<4.7&&pt()>20','eta()',1),
                               diTauJet1PhiPtSort = makeDiTauPtPair(src,"jphi_1",'abs(eta())<4.7&&pt()>20','phi()',0),
                               diTauJet2PhiPtSort = makeDiTauPtPair(src,"jphi_2",'abs(eta())<4.7&&pt()>20','phi()',1),
+
+                              diTauJet1GenPtPtSort = makeDiTauPtPair(src,"gen_jpt_1",'abs(eta())<4.7&&pt()>20','userFloat("genJetPt")',0),
+                              diTauJet2GenPtPtSort = makeDiTauPtPair(src,"gen_jpt_2",'abs(eta())<4.7&&pt()>20','userFloat("genJetPt")',1),
+
+                              diTauJet1GenEtaPtSort = makeDiTauPtPair(src,"gen_jeta_1",'abs(eta())<4.7&&pt()>20','userFloat("genJetEta")',0),
+                              diTauJet2GenEtaPtSort = makeDiTauPtPair(src,"gen_jeta_2",'abs(eta())<4.7&&pt()>20','userFloat("genJetEta")',1),
+                              diTauJet1GenPhiPtSort = makeDiTauPtPair(src,"gen_jphi_1",'abs(eta())<4.7&&pt()>20','userFloat("genJetPhi")',0),
+                              diTauJet2GenPhiPtSort = makeDiTauPtPair(src,"gen_jphi_2",'abs(eta())<4.7&&pt()>20','userFloat("genJetPhi")',1),
 
                               higgsPt = cms.PSet(
                                   pluginType = cms.string("PATGenParticleFiller"),

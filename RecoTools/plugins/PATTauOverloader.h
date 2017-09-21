@@ -150,6 +150,35 @@ class PATTauOverloader : public edm::EDProducer {
 
               pat::PackedCandidate const* packedLeadTauCand = dynamic_cast<pat::PackedCandidate const*>(tau.leadChargedHadrCand().get());
 
+	      std::vector<pat::PackedCandidate const*> packedCHIsoTauCands; 
+	      for(auto cand : tau.isolationChargedHadrCands() ){
+		pat::PackedCandidate const* tempIsoCand = dynamic_cast<pat::PackedCandidate const*>(cand.get());
+		packedCHIsoTauCands.push_back(tempIsoCand);
+	      }
+
+	      const double res_det = 0.030; // ns
+	      float newChIso3_ntracks = 0;
+	      float newChIso4_ntracks = 0;
+	      float newChIso6_ntracks = 0;
+	      float newChIso12_ntracks = 0; 
+	      float newChIso18_ntracks = 0;
+	      float newChIso3  = getTimedCHIsoSum(packedLeadTauCand, packedCHIsoTauCands , 3*res_det, newChIso3_ntracks ); // this is the nominal cut, 3 sigma
+	      float newChIso4  = getTimedCHIsoSum(packedLeadTauCand, packedCHIsoTauCands , 4*res_det, newChIso4_ntracks );
+	      float newChIso6  = getTimedCHIsoSum(packedLeadTauCand, packedCHIsoTauCands , 6*res_det, newChIso6_ntracks );
+	      float newChIso12 = getTimedCHIsoSum(packedLeadTauCand, packedCHIsoTauCands , 12*res_det, newChIso12_ntracks );
+	      float newChIso18 = getTimedCHIsoSum(packedLeadTauCand, packedCHIsoTauCands , 18*res_det, newChIso18_ntracks );
+
+	      tau.addUserFloat("newChIso3",newChIso3);
+	      tau.addUserFloat("newChIso4",newChIso4);
+	      tau.addUserFloat("newChIso6",newChIso6);
+	      tau.addUserFloat("newChIso12",newChIso12);
+	      tau.addUserFloat("newChIso18",newChIso18);
+	      tau.addUserFloat("newChIso3_ntracks",newChIso3_ntracks );
+	      tau.addUserFloat("newChIso4_ntracks",newChIso4_ntracks );
+	      tau.addUserFloat("newChIso6_ntracks",newChIso6_ntracks );
+	      tau.addUserFloat("newChIso12_ntracks",newChIso12_ntracks );
+	      tau.addUserFloat("newChIso18_ntracks",newChIso18_ntracks );
+
               if(tau.leadChargedHadrCand().isNonnull()){
                   leadChargedHadrTrackPt = tau.leadChargedHadrCand()->pt();
                   //leadChargedHadrTrackPtErr = tau.leadChargedHadrCand()->ptError();
@@ -181,6 +210,7 @@ class PATTauOverloader : public edm::EDProducer {
               tau.addUserFloat("muonNMatchedSeg",nMatchedSegments);
               tau.addUserFloat("muonTauHadMatched",muonMatched);
 
+	      
               out->push_back(tau);
           }
       }
@@ -263,7 +293,23 @@ class PATTauOverloader : public edm::EDProducer {
           return 6.0; // No match, return 6 for "fake tau"
       }
       return -1.0;
-  } 
+  }
+
+
+  double getTimedCHIsoSum( pat::PackedCandidate const* leadTauCand, std::vector<pat::PackedCandidate const*> isolationCands, float interval, float & n_tracks)
+  {
+    float sum = 0;
+    n_tracks = 0;
+    for( auto cand : isolationCands ) {
+
+      if(std::abs(cand->time()-leadTauCand->time()) < interval){
+	sum += cand->pt();
+	n_tracks +=1;
+      }
+    }
+    
+    return sum;
+  }
 
 
 

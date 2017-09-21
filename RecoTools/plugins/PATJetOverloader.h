@@ -276,7 +276,7 @@ class PATJetOverloader : public edm::EDProducer {
                     bool passPUM = false;
                     bool passPUT = false;
                     //	float jpumva = jet.userFloat("pileupJetId:fullDiscriminant");
-                    float jpu = jet.userInt("pileupJetId:fullId");
+                    float jpu = 0;//= jet.userInt("pileupJetId:fullId");
                     if (jpu==1){
                         passPUL = true;
                         passPUM = true;

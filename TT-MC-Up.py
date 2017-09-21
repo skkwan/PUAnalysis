@@ -20,7 +20,8 @@ process.MessageLogger.cerr.FwkReport.reportEvery = 10
 
 process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring(
-        'file:/cms/ojalvo/Timing-Htt/VBF-Htt-PU200-MINI.root'
+        'file:/hdfs/store/user/ymaravin/2017_Aug04_DYJetsToLL_M-50_PU200-SUB/SUB-022EEFB6-B058-E711-9A19-0025907B50E4.root'
+        #'file:/cms/ojalvo/Timing-Htt/VBF-Htt-PU200-MINI.root'
 		),
 		inputCommands=cms.untracked.vstring(
 						'keep *',
@@ -95,7 +96,7 @@ createGeneratedParticles(process,
 #in order to create two different trees, one with all the final selections
 #and one with looser selections.
 from PUAnalysis.Configuration.tools.ntupleToolsUpgrade import addDiTauEventTree
-addDiTauEventTree(process,'diTauEventTree')
+addDiTauEventTree(process,'diTauEventTree','diTausSync')
 addDiTauEventTree(process,'diTauEventTreeFinal','diTausOS')
 
 #This event summary tells you how many objects pass each of the steps
