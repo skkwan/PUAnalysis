@@ -1,0 +1,4 @@
+/store/mc/PhaseIITDRSpring17MiniAOD/GluGluHToTauTau_M125_14TeV_powheg_pythia8/MINIAODSIM/noPU_91X_upgrade2023_realistic_v3-v3/110000/180214AD-3871-E711-91CB-0242AC130002.root
+/store/mc/PhaseIITDRSpring17MiniAOD/GluGluHToTauTau_M125_14TeV_powheg_pythia8/MINIAODSIM/noPU_91X_upgrade2023_realistic_v3-v3/110000/5EBD98A8-B36F-E711-8F6D-0242AC130002.root
+/store/mc/PhaseIITDRSpring17MiniAOD/GluGluHToTauTau_M125_14TeV_powheg_pythia8/MINIAODSIM/noPU_91X_upgrade2023_realistic_v3-v3/110000/D41DCDDB-1070-E711-AA2C-484D7E8DF0C6.root
+/store/mc/PhaseIITDRSpring17MiniAOD/GluGluHToTauTau_M125_14TeV_powheg_pythia8/MINIAODSIM/noPU_91X_upgrade2023_realistic_v3-v3/110000/E048B377-3871-E711-8077-A0369F7FCA68.root

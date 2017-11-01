@@ -368,7 +368,7 @@ def makeEleTauCSVShape(sourceDiTaus):
    return PSet
 
 
-def addDiTauEventTree(process,name,src = 'diTausOS', srcLL = 'diMuonsOSSorted', srcU='TightMuons', srcE='TightElectrons',triggerCollection='HLT'):
+def addDiTauEventTree(process,name,src = 'diTausOS', srcLL = 'diMuonsOSSorted', srcU='TightMuons', srcE='TightElectrons',triggerCollection='HLT',srcEE = 'diEleOSSorted'):
    process.TFileService = cms.Service("TFileService", fileName = cms.string("analysis.root") )
    eventTree = cms.EDAnalyzer('EventTreeMaker',
                               genEvent = cms.InputTag('generator'),
@@ -456,6 +456,15 @@ def addDiTauEventTree(process,name,src = 'diTausOS', srcLL = 'diMuonsOSSorted', 
                               #diTauEta2LL = makeLTauGeneric("PATMuPairFiller",srcLL,"LLeta_2","leg2.eta"),#FILLED
                               #diTauPhi1LL = makeLTauGeneric("PATMuPairFiller",srcLL,"LLphi_1","leg1.phi"),#FILLED
                               #diTauPhi2LL = makeLTauGeneric("PATMuPairFiller",srcLL,"LLphi_2","leg2.phi"),#FILLED
+
+			      diTauMassEE = makeLTauGeneric("PATElePairFiller",srcEE,"EEmass","mass"),
+                              diTauPt1EE =  makeLTauGeneric("PATElePairFiller",srcEE,"EEpt_1","leg1.pt"), #FIEEED
+                              diTauPt2EE =  makeLTauGeneric("PATElePairFiller",srcEE,"EEpt_2","leg2.pt"), #FIEEED
+                              diTauEta1EE = makeLTauGeneric("PATElePairFiller",srcEE,"EEeta_1","leg1.eta"),#FIEEED
+                              diTauEta2EE = makeLTauGeneric("PATElePairFiller",srcEE,"EEeta_2","leg2.eta"),#FIEEED
+                              diTauPhi1EE = makeLTauGeneric("PATElePairFiller",srcEE,"EEphi_1","leg1.phi"),#FIEEED
+                              diTauPhi2EE = makeLTauGeneric("PATElePairFiller",srcEE,"EEphi_2","leg2.phi"),#FIEEED
+
                               #diTauEffCSV = makeDiTauEffCSV(src),  ##need to put csv eff back in
                               #diTauCSVShape = makeDiTauCSVShape(src), ## need to put csv shape back in
                               #diTauJES = makeDiTauVBFPair(src),#FILLED
@@ -465,9 +474,15 @@ def addDiTauEventTree(process,name,src = 'diTausOS', srcLL = 'diMuonsOSSorted', 
                               genTaus = makeCollSize("genTauCands","genTaus"), 
                               muMuSize = makeCollSize(srcLL,"diLeptons"),#CHECKME
                               muMuSizeVeto = makeCollSizeVeto(srcLL,0,"dilepton_veto"),#CHECKME
+
+                              eESize = makeCollSize(srcEE,"diLeptonsEE"),#CHECKME
+                              eESizeVeto = makeCollSizeVeto(srcEE,0,"dileptonEE_veto"),#CHECKME
+
                               muonsSizeMT = makeCollSize(srcU,"tightMuons"),#FILLED
                               muonsSizeMTVeto = makeCollSizeVeto(srcU,0,"extramuon_veto"),#FILLED
+                              muonsLooseSizeMT = makeCollSize("LooseMuons","looseMuons"),#FILLED
                               electronsSizeMT = makeCollSize(srcE,"tightElectrons"),#FILLED
+                              electronsLooseSizeMT = makeCollSize("LooseElectrons","looseElectrons"),#FILLED
                               electronsSizeMTVeto = makeCollSizeVeto(srcE,0,"extraelec_veto"),#FILLED
                               #tauNIsoTracks =  makeDiTauPair(src,"tauNIsoTracks","leg2.userFloat('nIsoTracks')"), #FILLED
                               #tauNMatchedSeg =  makeDiTauPair(src,"tauMuonNMatchedSeg","leg2.userFloat('muonNMatchedSeg')"),#FILLED
@@ -598,6 +613,9 @@ def addDiTauEventTree(process,name,src = 'diTausOS', srcLL = 'diMuonsOSSorted', 
                               diTauJet1PhiPtSort = makeDiTauPtPair(src,"jphi_1",'abs(eta())<4.7&&pt()>20','phi()',0),
                               diTauJet2PhiPtSort = makeDiTauPtPair(src,"jphi_2",'abs(eta())<4.7&&pt()>20','phi()',1),
 
+                              diTauJet1GenPtPtSortDR = makeDiTauPtPair(src,"gen_jDR_1",'abs(eta())<4.7&&pt()>20','userFloat("genJetDR")',0),
+                              diTauJet2GenPtPtSortDR = makeDiTauPtPair(src,"gen_jDR_2",'abs(eta())<4.7&&pt()>20','userFloat("genJetDR")',1),
+
                               diTauJet1GenPtPtSort = makeDiTauPtPair(src,"gen_jpt_1",'abs(eta())<4.7&&pt()>20','userFloat("genJetPt")',0),
                               diTauJet2GenPtPtSort = makeDiTauPtPair(src,"gen_jpt_2",'abs(eta())<4.7&&pt()>20','userFloat("genJetPt")',1),
 
@@ -605,6 +623,19 @@ def addDiTauEventTree(process,name,src = 'diTausOS', srcLL = 'diMuonsOSSorted', 
                               diTauJet2GenEtaPtSort = makeDiTauPtPair(src,"gen_jeta_2",'abs(eta())<4.7&&pt()>20','userFloat("genJetEta")',1),
                               diTauJet1GenPhiPtSort = makeDiTauPtPair(src,"gen_jphi_1",'abs(eta())<4.7&&pt()>20','userFloat("genJetPhi")',0),
                               diTauJet2GenPhiPtSort = makeDiTauPtPair(src,"gen_jphi_2",'abs(eta())<4.7&&pt()>20','userFloat("genJetPhi")',1),
+####jet id
+                              diTauJetsPt30njets_passid = makeDiTauJetCountPair(src,"njets_passid",'pt()>30&&abs(eta)<4.7&&userFloat("idTight_upgrade")>0'),
+                              diTauJetsPt20njets_passid = makeDiTauJetCountPair(src,"njetspt20_passid",'pt()>20&&abs(eta)<4.7&&userFloat("idTight_upgrade")>0'),
+
+                              diTauJet1PtPtSort_passid = makeDiTauPtPair(src,"jpassid_1",'abs(eta())<4.7&&pt()>20','userFloat("idTight_upgrade")',0),
+                              diTauJet2PtPtSort_passid = makeDiTauPtPair(src,"jpassid_2",'abs(eta())<4.7&&pt()>20','userFloat("idTight_upgrade")',1),
+
+###jet Id and Lepton ID applied
+                              diTauJetsPt30njets_passid_veto = makeDiTauJetCountPair(src,"njets_passid_veto",'pt()>30&&abs(eta)<4.7&&userFloat("idTight_upgrade")>0&&userFloat("lepveto_upgrade")>0'),
+                              diTauJetsPt20njets_passid_veto = makeDiTauJetCountPair(src,"njetspt20_passid_veto",'pt()>20&&abs(eta)<4.7&&userFloat("idTight_upgrade")>0&&userFloat("lepveto_upgrade")>0'),
+
+                              diTauJet1PtPtSort_passid_veto = makeDiTauPtPair(src,"jpassid_veto_1",'abs(eta())<4.7&&pt()>20','userFloat("lepveto_upgrade")',0),
+                              diTauJet2PtPtSort_passid_veto = makeDiTauPtPair(src,"jpassid_veto_2",'abs(eta())<4.7&&pt()>20','userFloat("lepveto_upgrade")',1),
 
                               higgsPt = cms.PSet(
                                   pluginType = cms.string("PATGenParticleFiller"),

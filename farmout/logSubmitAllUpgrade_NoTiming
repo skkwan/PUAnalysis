@@ -1,0 +1,90 @@
+Copying 47344816 bytes file:///nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_DYJets_200PU-SUB/user_code.tgz => srm://cmssrm2.hep.wisc.edu:8443/srm/v2/server?SFN=/hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_DYJets_200PU-SUB/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_DYJets_200PU-SUB...
+..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Submitting job(s)..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+506 job(s) submitted to cluster 8169887.
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2017_Oct13_Upgrade_NoTiming_DYJets_200PU are created in /nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_DYJets_200PU-SUB
+Copying 47344816 bytes file:///nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_DYJets_0PU-SUB/user_code.tgz => srm://cmssrm2.hep.wisc.edu:8443/srm/v2/server?SFN=/hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_DYJets_0PU-SUB/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_DYJets_0PU-SUB...
+...................................
+Submitting job(s)...................................
+35 job(s) submitted to cluster 8169888.
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2017_Oct13_Upgrade_NoTiming_DYJets_0PU are created in /nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_DYJets_0PU-SUB
+Copying 47344816 bytes file:///nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_TTbar_200PU-SUB/user_code.tgz => srm://cmssrm2.hep.wisc.edu:8443/srm/v2/server?SFN=/hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_TTbar_200PU-SUB/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_TTbar_200PU-SUB...
+...............................................................................................
+Submitting job(s)...............................................................................................
+95 job(s) submitted to cluster 8169889.
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2017_Oct13_Upgrade_NoTiming_TTbar_200PU are created in /nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_TTbar_200PU-SUB
+Copying 47344816 bytes file:///nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_TTbar_0PU-SUB/user_code.tgz => srm://cmssrm2.hep.wisc.edu:8443/srm/v2/server?SFN=/hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_TTbar_0PU-SUB/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_TTbar_0PU-SUB...
+............
+Submitting job(s)............
+12 job(s) submitted to cluster 8169890.
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2017_Oct13_Upgrade_NoTiming_TTbar_0PU are created in /nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_TTbar_0PU-SUB
+Copying 47344816 bytes file:///nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_VBF_200PU-SUB/user_code.tgz => srm://cmssrm2.hep.wisc.edu:8443/srm/v2/server?SFN=/hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_VBF_200PU-SUB/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_VBF_200PU-SUB...
+..........................
+Submitting job(s)..........................
+26 job(s) submitted to cluster 8169891.
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2017_Oct13_Upgrade_NoTiming_VBF_200PU are created in /nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_VBF_200PU-SUB
+Copying 47344816 bytes file:///nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_VBF_0PU-SUB/user_code.tgz => srm://cmssrm2.hep.wisc.edu:8443/srm/v2/server?SFN=/hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_VBF_0PU-SUB/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_VBF_0PU-SUB...
+........
+Submitting job(s)........
+8 job(s) submitted to cluster 8169892.
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2017_Oct13_Upgrade_NoTiming_VBF_0PU are created in /nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_VBF_0PU-SUB
+Copying 47344816 bytes file:///nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_GGH_200PU-SUB/user_code.tgz => srm://cmssrm2.hep.wisc.edu:8443/srm/v2/server?SFN=/hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_GGH_200PU-SUB/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_GGH_200PU-SUB...
+........................
+Submitting job(s)........................
+24 job(s) submitted to cluster 8169893.
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2017_Oct13_Upgrade_NoTiming_GGH_200PU are created in /nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_GGH_200PU-SUB
+Copying 47344816 bytes file:///nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_GGH_0PU-SUB/user_code.tgz => srm://cmssrm2.hep.wisc.edu:8443/srm/v2/server?SFN=/hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_GGH_0PU-SUB/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_GGH_0PU-SUB...
+....
+Submitting job(s)....
+4 job(s) submitted to cluster 8169894.
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2017_Oct13_Upgrade_NoTiming_GGH_0PU are created in /nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_GGH_0PU-SUB
+Copying 47344816 bytes file:///nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_QCD_200PU-SUB/user_code.tgz => srm://cmssrm2.hep.wisc.edu:8443/srm/v2/server?SFN=/hdfs/HighReplicaCondorUserFiles//nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_QCD_200PU-SUB/user_code.tgz
+Generating submit files in /nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_QCD_200PU-SUB...
+........................................................................................................................................................................................................................................................................................................................................................................................................................................................
+Submitting job(s)........................................................................................................................................................................................................................................................................................................................................................................................................................................................
+440 job(s) submitted to cluster 8169895.
+
+Your jobs should show up in ~6 minutes
+at the NEW job monitoring web page :
+    http://www.hep.wisc.edu/cms/comp/jobs/
+Jobs for 2017_Oct13_Upgrade_NoTiming_QCD_200PU are created in /nfs_scratch/ojalvo/2017_Oct13_Upgrade_NoTiming_QCD_200PU-SUB

@@ -1,0 +1,17 @@
+<use   name="root"/>
+<use   name="rootcore"/>
+<use   name="PhysicsTools/FWLite"/>
+<use   name="PhysicsTools/Utilities"/>
+<use   name="DataFormats/FWLite"/>
+<use   name="TauAnalysis/SVfitStandalone"/> 
+<use   name="roofit"/>
+<use   name="roostats"/>
+<use   name="HTT-utilities/RecoilCorrections"/>
+<use   name="HTTutilities/Jet2TauFakes"/>
+
+<!--<use   name="roottmva"/>0-->
+
+
+
+<bin   name="EventWeightsIterative" file="EventWeightsIterative.cc">
+</bin>

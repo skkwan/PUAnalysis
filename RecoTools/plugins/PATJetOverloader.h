@@ -114,37 +114,42 @@ class PATJetOverloader : public edm::EDProducer {
 
 		virtual void produce(edm::Event& iEvent, const edm::EventSetup& iSetup)
 		{
-			//std::cout<<"===== PATJetOverloader NAMESPACE ====="<<std::endl;
-			using namespace edm;
-			using namespace reco;
-			using namespace std;
-			//std::cout<<"===== PATJetOverloader JetCollection ====="<<std::endl;
-			std::unique_ptr<pat::JetCollection> out(new pat::JetCollection);
-			Handle<pat::JetCollection > cands;
-			Handle<reco::GenJetCollection > genJets;
-			if(iEvent.getByToken(src_,cands)) 
-				for(unsigned int  i=0;i!=cands->size();++i){
-					pat::Jet jet = cands->at(i);
-					float pt=0.0;
-					float sumPt=0.0;
-					float sumPt2=0.0;
-					//std::cout<<"===== PATJetOverloader Jet Number of Daughters ====="<<std::endl;
-					//std::cout<<"numberOfDaughters(Constituents): "<<jet.numberOfDaughters()<<std::endl;
-					std::vector<reco::CandidatePtr> daus(jet.daughterPtrVector());
-					std::sort(daus.begin(), daus.end(), [](const reco::CandidatePtr &p1, const reco::CandidatePtr &p2) { return p1->pt() > p2->pt(); }); // the joys of C++11
-					for (unsigned int i2 = 0, n = daus.size(); i2 < n; ++i2) {
-						const pat::PackedCandidate &cand = dynamic_cast<const pat::PackedCandidate &>(*daus[i2]);
-						pt=cand.pt();
-						//std::cout<<"Constituent Pt: "<<pt<<std::endl;
-						sumPt+=pt;
-						sumPt2+=pt*pt;
-					}
-					//std::cout<<"Constituent SumPt: "<<sumPt<<std::endl;
-					//std::cout<<"Constituent SumPt^2: "<<sumPt2<<std::endl;
+		  //std::cout<<"===== PATJetOverloader NAMESPACE ====="<<std::endl;
+		  using namespace edm;
+		  using namespace reco;
+		  using namespace std;
+		  //std::cout<<"===== PATJetOverloader JetCollection ====="<<std::endl;
+		  std::unique_ptr<pat::JetCollection> out(new pat::JetCollection);
+		  Handle<pat::JetCollection > cands;
+		  Handle<reco::GenJetCollection > genJets;
+		  if(iEvent.getByToken(src_,cands)) 
+		    for(unsigned int  i=0;i!=cands->size();++i){
+		      pat::Jet jet = cands->at(i);
+		      float pt=0.0;
+		      float sumPt=0.0;
+		      float sumPt2=0.0;
+		      //std::cout<<"===== PATJetOverloader Jet Number of Daughters ====="<<std::endl;
+		      //std::cout<<"numberOfDaughters(Constituents): "<<jet.numberOfDaughters()<<std::endl;
+		      std::vector<reco::CandidatePtr> daus(jet.daughterPtrVector());
+		      std::sort(daus.begin(), daus.end(), [](const reco::CandidatePtr &p1, const reco::CandidatePtr &p2) { return p1->pt() > p2->pt(); }); // the joys of C++11
+		      for (unsigned int i2 = 0, n = daus.size(); i2 < n; ++i2) {
+			const pat::PackedCandidate &cand = dynamic_cast<const pat::PackedCandidate &>(*daus[i2]);
+			pt=cand.pt();
+			//std::cout<<"Constituent Pt: "<<pt<<std::endl;
+			sumPt+=pt;
+			sumPt2+=pt*pt;
+		      }
+		      //std::cout<<"Constituent SumPt: "<<sumPt<<std::endl;
+		      //std::cout<<"Constituent SumPt^2: "<<sumPt2<<std::endl;
+		      
+		      bool loose = true;
+		      bool medium = true; //tightLep veto
+		      bool tight = true;
 
-					bool loose = true;
-					bool medium = true; //tightLep veto
-                    bool tight = true;
+		      bool tight_upgrade = true;
+		      bool lepveto_upgrade = true;
+
+
                     if (std::abs(jet.eta()) <= 2.7){
                         if (jet.neutralHadronEnergyFraction() >= 0.99)
                             loose = false;
@@ -163,6 +168,7 @@ class PATJetOverloader : public edm::EDProducer {
                         }
                         if (jet.muonEnergyFraction() >= 0.8){
                             medium = false;
+			    lepveto_upgrade = false;
                         }
                         if (std::abs(jet.eta()) <= 2.4) {
                             if (jet.chargedHadronEnergyFraction() == 0) {
@@ -182,6 +188,7 @@ class PATJetOverloader : public edm::EDProducer {
                             }
                             if (jet.chargedEmEnergyFraction() >= 0.90) {
                                 medium = false;
+				lepveto_upgrade = false;
                             }
                         }
                     }
@@ -195,6 +202,9 @@ class PATJetOverloader : public edm::EDProducer {
                             loose = false;
                             tight = false;
                         }
+                        if (jet.neutralMultiplicity() < 1){
+			  tight_upgrade = false;
+			}
                     }
                     else if (std::abs(jet.eta()) > 3.0) {
                         medium = false;
@@ -208,10 +218,19 @@ class PATJetOverloader : public edm::EDProducer {
                             medium = false;
                             tight = false;
                         }
+                        if (jet.neutralMultiplicity() < 2){
+			  tight_upgrade = false;
+			}
+                        if (jet.neutralEmEnergyFraction() >= 0.5) {
+			  tight_upgrade = false;
+			}
+
                     }
                     jet.addUserFloat("idLoose", loose);
                     jet.addUserFloat("idTightLepVeto", medium);
                     jet.addUserFloat("idTight", tight);
+		    jet.addUserFloat("idTight_upgrade",tight_upgrade);
+		    jet.addUserFloat("lepveto_upgrade",lepveto_upgrade);
 
                     int isbtagged=0;
                     int isbtaggedup=0;
@@ -300,11 +319,12 @@ class PATJetOverloader : public edm::EDProducer {
                     float genJetPt =-10;
                     float genJetEta =-10;
                     float genJetPhi =-10;
-                    float DRMin = 0.5;
+                    float DRMin = 10;
                     float Vtx3dL = -10;
                     float Vtx3deL = -10;
                     float VtxPt = -10;
                     float uncorrectedPt= -10;
+		    float deltar = 10;
                     //std::cout<<"===== PATJetOverloader UncorrectedPt ====="<<std::endl;
                     uncorrectedPt = jet.correctedP4(0).pt();
                     //CHECKME
@@ -314,10 +334,11 @@ class PATJetOverloader : public edm::EDProducer {
                     if(iEvent.getByToken(genJets_,genJets))
                         for(unsigned int k=0;k!=genJets->size();k++){
                             if(ROOT::Math::VectorUtil::DeltaR(genJets->at(k).p4(),jet.p4())<DRMin){
-                                DRMin = ROOT::Math::VectorUtil::DeltaR(genJets->at(k).p4(),jet.p4());
-                                genJetPt=genJets->at(k).pt();
-                                genJetEta=genJets->at(k).eta();
-                                genJetPhi=genJets->at(k).phi();
+			      DRMin = abs(ROOT::Math::VectorUtil::DeltaR(genJets->at(k).p4(),jet.p4()));
+			      genJetPt=genJets->at(k).pt();
+			      genJetEta=genJets->at(k).eta();
+			      genJetPhi=genJets->at(k).phi();
+			      deltar = DRMin;
                             }
                         }
 
@@ -356,6 +377,7 @@ class PATJetOverloader : public edm::EDProducer {
                     jet.addUserFloat("genJetEta",genJetEta);
                     jet.addUserFloat("genJetPhi",genJetPhi);
                     jet.addUserFloat("genJetPt",genJetPt);
+                    jet.addUserFloat("genJetDR",deltar);
                     jet.addUserFloat("ptRMS",sqrt(sumPt2/(sumPt*sumPt)));
                     out->push_back(jet);
 

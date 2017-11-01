@@ -53,26 +53,15 @@ def defaultReconstructionMC(process,triggerProcess = 'HLT',triggerPaths = ['HLT_
   #reRunMET(process,False)
   #metSignificance(process)
 
+  correctJetsUpgrade(process,False,"slimmedJetsPuppi")
   #recorrectJets(process, False) #adds patJetsReapplyJEC
-
-
-  #no trigger here!!!  
-  #muonTriggerMatchMiniAOD(process,triggerProcess,HLT,"miniAODMuonID")#NEW
-  #electronTriggerMatchMiniAOD(process,triggerProcess,HLT,"miniAODElectronVID")#NEW
-  #tauTriggerMatchMiniAOD(process,triggerProcess,HLT,"slimmedTaus") #ESTaus
-
   genmatchtaus(process)  
-  #reRunTaus(process,"triggeredPatTaus")
 
-
-  #Build good vertex collection
-  #goodVertexFilter(process)  
-  #tauEffi(process,'rerunSlimmedTaus',False)
   tauOverloading(process,'slimmedTaus','triggeredPatMuons','offlineSlimmedPrimaryVertices')
   
-  #triLeptons(process)
+  triLeptons(process)
 
-  jetOverloading(process,"slimmedJetsPuppi",False)
+  jetOverloading(process,"patJetsReapplyJEC",False)
   #MiniAODJES(process,"patOverloadedJets")
 
   jetFilter(process,"JESJets")
@@ -449,6 +438,40 @@ def recorrectJets(process, isData = False, src = "slimmedJets"):
         process.patJetCorrFactorsReapplyJEC.levels = ['L1FastJet', 'L2Relative', 'L3Absolute', 'L2L3Residual']
     process.analysisSequence *= process.patJetCorrFactorsReapplyJEC 
 
+def correctJetsUpgrade(process, isData = False, src = "slimmedJets"):
+    print 'recorrecting the jets'
+    JECTag = 'PhaseIISummer16_25nsV3_MC'
+    cmssw_base = os.environ['CMSSW_BASE']
+## getting the JEC from the DB
+    process.load("CondCore.CondDB.CondDB_cfi")
+    process.jec = cms.ESSource("PoolDBESSource",
+                               DBParameters = cms.PSet( messageLevel = cms.untracked.int32(0)),
+                               timetype = cms.string('runnumber'),
+                               toGet = cms.VPSet(cms.PSet(record = cms.string('JetCorrectionsRecord'),
+                                                          tag    = cms.string('JetCorrectorParametersCollection_'+JECTag+'_AK4PFPuppi'),
+                                                          label  = cms.untracked.string('AK4PFPuppi')
+                                                          )
+                                                 ), 
+                               connect = cms.string('sqlite:////'+cmssw_base+'/src/PUAnalysis/Configuration/data/'+JECTag+'.db')
+                               )
+   
+     ## add an es_prefer statement to resolve a possible conflict from simultaneous connection to a global tag
+    process.es_prefer_jec = cms.ESPrefer('PoolDBESSource','jec')
+    ## https://twiki.cern.ch/twiki/bin/view/CMSPublic/WorkBookJetEnergyCorrections#CorrPatJets
+    from PhysicsTools.PatAlgos.producersLayer1.jetUpdater_cff import updatedPatJetCorrFactors
+    process.patJetCorrFactorsReapplyJEC = updatedPatJetCorrFactors.clone(
+      src = cms.InputTag(src),
+      levels = ['L1FastJet', 'L2Relative', 'L3Absolute'],
+      payload = 'AK4PFPuppi' ) # Make sure to choose the appropriate levels and payload here!
+    from PhysicsTools.PatAlgos.producersLayer1.jetUpdater_cff import updatedPatJets
+    process.patJetsReapplyJEC = updatedPatJets.clone(
+      jetSource = cms.InputTag(src),
+      jetCorrFactorsSource = cms.VInputTag(cms.InputTag("patJetCorrFactorsReapplyJEC"))
+      )
+    if(isData):
+        process.patJetCorrFactorsReapplyJEC.levels = ['L1FastJet', 'L2Relative', 'L3Absolute', 'L2L3Residual']
+    process.analysisSequence *= (process.patJetCorrFactorsReapplyJEC + process.patJetsReapplyJEC)
+
 def GenSumWeights(process):
 
   process.sumweights = cms.EDFilter("GenWeightSum")
@@ -468,17 +491,29 @@ def triLeptons(process):
 
   process.TightElectrons = cms.EDFilter("PATElectronSelector",
   							src = cms.InputTag("miniAODElectronVID"),
-  							cut = cms.string('pt>10&&abs(eta)<2.5&&abs(userFloat("dZ"))<0.2&&abs(userFloat("dXY"))<0.045&&userFloat("dBRelIso03")<0.3&&userInt("eleConversion")==0'),
+  							cut = cms.string('pt>10&&abs(eta)<3&&abs(userFloat("dZ"))<0.2&&abs(userFloat("dXY"))<0.045&&userFloat("dBRelIso03")<0.5'),
   							filter = cms.bool(False)
   						)
   						
   process.TightMuons = cms.EDFilter("PATMuonSelector",
   							src = cms.InputTag("miniAODMuonID"),
-  							cut = cms.string('pt>10&&abs(eta)<2.4&&abs(userFloat("dZ"))<0.2&&abs(userFloat("dXY"))<0.045&&userInt("mediumID")>0&&userFloat("dBRelIso")<0.3'),
+  							cut = cms.string('pt>10&&abs(eta)<3&&abs(userFloat("dZ"))<0.2&&abs(userFloat("dXY"))<0.045&&userInt("mediumID")>0&&userFloat("dBRelIso")<0.5'),
   							filter = cms.bool(False)
   						)
 
-  process.analysisSequence = cms.Sequence(process.analysisSequence*process.TightMuons*process.TightElectrons)
+  process.LooseElectrons = cms.EDFilter("PATElectronSelector",
+  							src = cms.InputTag("miniAODElectronVID"),
+  							cut = cms.string('pt>10&&abs(eta)<3&&abs(userFloat("dZ"))<0.2&&abs(userFloat("dXY"))<0.045'),
+  							filter = cms.bool(False)
+  						)
+  						
+  process.LooseMuons = cms.EDFilter("PATMuonSelector",
+  							src = cms.InputTag("miniAODMuonID"),
+  							cut = cms.string('pt>10&&abs(eta)<3&&abs(userFloat("dZ"))<0.2&&abs(userFloat("dXY"))<0.045'),
+  							filter = cms.bool(False)
+  						)
+
+  process.analysisSequence = cms.Sequence(process.analysisSequence*process.TightMuons*process.TightElectrons*process.LooseMuons*process.LooseElectrons)
   						
    
 def kineWeightsEmbET(process):

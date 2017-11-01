@@ -13,7 +13,7 @@
 /// collection of CompositeRefCandidateT1T2MEt objects
 //typedef std::vector<PATJetPair> PATJetPairCollection;
 typedef std::vector<DiCandidatePair> DiCandidatePairCollection;
-//typedef std::vector<PATElecPair> PATElecPairCollection;
+typedef std::vector<PATElecPair> PATElecPairCollection;
 typedef std::vector<PATMuPair> PATMuPairCollection;
 typedef std::vector<PATElecTauPair> PATElecTauPairCollection;
 //typedef std::vector<PATElecSCPair> PATElecSCPairCollection;
@@ -40,7 +40,7 @@ typedef std::vector<PATMuMuTauTauQuad> PATMuMuTauTauQuadCollection;
 // persistent reference to a CompositeRefCandidateT1T2MEt object
 //typedef edm::Ref<PATMuJetPairCollection> PATMuJetPairRef;
 typedef edm::Ref<DiCandidatePairCollection> DiCandidatePairRef;
-//typedef edm::Ref<PATElecPairCollection> PATElecPairRef;
+typedef edm::Ref<PATElecPairCollection> PATElecPairRef;
 typedef edm::Ref<PATMuPairCollection> PATMuPairRef;
 typedef edm::Ref<PATElecTauPairCollection> PATElecTauPairRef;
 //typedef edm::Ref<PATElecSCPairCollection> PATElecSCPairRef;
@@ -67,7 +67,7 @@ typedef edm::Ref<PATMuMuTauTauQuadCollection> PATMuMuTauTauQuadRef;
 /// references to CompositeRefCandidateT1T2MEt collection
 //typedef edm::RefProd<PATMuJetPairCollection> PATMuJetPairRefProd;
 typedef edm::RefProd<DiCandidatePairCollection> DiCandidatePairRefProd;
-//typedef edm::RefProd<PATElecPairCollection> PATElecPairRefProd;
+typedef edm::RefProd<PATElecPairCollection> PATElecPairRefProd;
 typedef edm::RefProd<PATMuPairCollection> PATMuPairRefProd;
 typedef edm::RefProd<PATElecTauPairCollection> PATElecTauPairRefProd;
 //typedef edm::RefProd<PATElecSCPairCollection> PATElecSCPairRefProd;
@@ -94,7 +94,7 @@ typedef edm::RefProd<PATMuMuTauTauQuadCollection> PATMuMuTauTauQuadRefProd;
 // vector of references to CompositeRefCandidateT1T2MEt objects all in the same collection
 //typedef edm::RefVector<PATJetPairCollection> PATJetPairRefVector;
 typedef edm::RefVector<DiCandidatePairCollection> DiCandidatePairRefVector;
-//typedef edm::RefVector<PATElecPairCollection> PATElecPairRefVector;
+typedef edm::RefVector<PATElecPairCollection> PATElecPairRefVector;
 typedef edm::RefVector<PATMuPairCollection> PATMuPairRefVector;
 //typedef edm::RefVector<PATMuTrackPairCollection> PATMuTrackPairRefVector;
 //typedef edm::RefVector<PATEleTrackPairCollection> PATEleTrackPairRefVector;

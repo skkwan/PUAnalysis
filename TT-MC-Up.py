@@ -10,7 +10,7 @@ process.options.allowUnscheduled = cms.untracked.bool(True)
 
 
 process.maxEvents = cms.untracked.PSet(
-    input = cms.untracked.int32(1000)
+    input = cms.untracked.int32(400)
 )
 
 
@@ -20,7 +20,24 @@ process.MessageLogger.cerr.FwkReport.reportEvery = 10
 
 process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring(
-        'file:/hdfs/store/user/ymaravin/2017_Aug04_DYJetsToLL_M-50_PU200-SUB/SUB-022EEFB6-B058-E711-9A19-0025907B50E4.root'
+        #'file:/hdfs/store/user/ymaravin/2017_Aug04_DYJetsToLL_M-50_PU200-SUB/SUB-022EEFB6-B058-E711-9A19-0025907B50E4.root'
+        'file:/hdfs/store/user/ymaravin/CRAB/DYJetsToLL_M-50_TuneCUETP8M1_14TeV-madgraphMLM-pythia8/crab_job_phase2_DYJetsToLL_test/170724_102227/0000/step4_1.root'
+        #'file:/hdfs/store/user/ymaravin/2017_Aug04_DYJetsToLL_M-50_PU200-SUB/SUB-0215E0C6-3758-E711-9095-F02FA768CF8A.root',
+        #'file:/hdfs/store/user/ymaravin/2017_Aug04_DYJetsToLL_M-50_PU200-SUB/SUB-02174737-675E-E711-BDA3-782BCB539695.root',
+        #'file:/hdfs/store/user/ymaravin/2017_Aug04_DYJetsToLL_M-50_PU200-SUB/SUB-022EEFB6-B058-E711-9A19-0025907B50E4.root',
+        #'file:/hdfs/store/user/ymaravin/2017_Aug04_DYJetsToLL_M-50_PU200-SUB/SUB-023ACFA2-025C-E711-9421-D4AE527EEA1D.root',
+        #'file:/hdfs/store/user/ymaravin/2017_Aug04_DYJetsToLL_M-50_PU200-SUB/SUB-024753C1-FB58-E711-869C-48FD8E069BA7.root',
+        #'file:/hdfs/store/user/ymaravin/2017_Aug04_DYJetsToLL_M-50_PU200-SUB/SUB-0248CC58-2E5B-E711-8123-5065F3810301.root',
+        #'file:/hdfs/store/user/ymaravin/2017_Aug04_DYJetsToLL_M-50_PU200-SUB/SUB-025C6ABB-325B-E711-82FE-782BCB20EDFD.root',
+        #'file:/hdfs/store/user/ymaravin/2017_Aug04_DYJetsToLL_M-50_PU200-SUB/SUB-02793B01-4E5C-E711-BBE0-002590D9D8D4.root',
+        #'file:/hdfs/store/user/ymaravin/2017_Aug04_DYJetsToLL_M-50_PU200-SUB/SUB-027B34F0-5C59-E711-9D10-48FD8E28249D.root',
+        #'file:/hdfs/store/user/ymaravin/2017_Aug04_DYJetsToLL_M-50_PU200-SUB/SUB-02BC4910-5A59-E711-A533-0090FAA57F34.root',
+        #'file:/hdfs/store/user/ymaravin/2017_Aug04_DYJetsToLL_M-50_PU200-SUB/SUB-02C1CE34-2E59-E711-96E6-002590D0B080.root',
+        #'file:/hdfs/store/user/ymaravin/2017_Aug04_DYJetsToLL_M-50_PU200-SUB/SUB-02C32D21-5459-E711-8C03-0CC47A4DED58.root',
+        #'file:/hdfs/store/user/ymaravin/2017_Aug04_DYJetsToLL_M-50_PU200-SUB/SUB-02CAE3E0-6359-E711-AE38-00259073E4BC.root',
+        #'file:/hdfs/store/user/ymaravin/2017_Aug04_DYJetsToLL_M-50_PU200-SUB/SUB-02DB74F5-8C5B-E711-A7D6-0025901ABB72.root',
+        #'file:/hdfs/store/user/ymaravin/2017_Aug04_DYJetsToLL_M-50_PU200-SUB/SUB-02E7BAB1-805E-E711-93A4-1866DAEEB358.root',
+        #'file:/hdfs/store/user/ymaravin/2017_Aug04_DYJetsToLL_M-50_PU200-SUB/SUB-02F556ED-4A5E-E711-8A8B-0CC47AA992AE.root'
         #'file:/cms/ojalvo/Timing-Htt/VBF-Htt-PU200-MINI.root'
 		),
 		inputCommands=cms.untracked.vstring(
