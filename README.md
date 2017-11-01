@@ -17,7 +17,7 @@ to run test
 
 ```
 cd PUAnalysis
-cmsRun TT-MC.py
+cmsRun TT-MC-Up.py
 ```
 The output file, analysis.root
 
