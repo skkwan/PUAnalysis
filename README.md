@@ -5,8 +5,8 @@ PUAnalysis
 #Set Up instructions:
 
 ```
-cmsrel CMSSW_8_0_21 #for 2016 analysis
-cd CMSSW_8_0_21/src/
+cmsrel CMSSW_9_3_2 #for Upgrade Analysis with HGCAL
+cd CMSSW_9_3_2/src/
 cmsenv
 git cms-init 
 git clone https://github.com/isobelojalvo/PUAnalysis.git   
