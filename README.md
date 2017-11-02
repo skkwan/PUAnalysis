@@ -9,7 +9,7 @@ cmsrel CMSSW_9_3_2 #for Upgrade Analysis with HGCAL
 cd CMSSW_9_3_2/src/
 cmsenv
 git cms-init 
-git clone https://github.com/isobelojalvo/PUAnalysis.git   
+git clone --recursive -b timing_9_3_X https://github.com/isobelojalvo/PUAnalysis.git   
 export USER_CXXFLAGS="-Wno-delete-non-virtual-dtor -Wno-error=unused-but-set-variable -Wno-error=unused-variable -Wno-error=sign-compare -Wno-error=reorder"
 scram b -j 8
 ```
