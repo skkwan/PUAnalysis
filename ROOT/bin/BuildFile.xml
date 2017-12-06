@@ -15,3 +15,6 @@
 
 <bin   name="EventWeightsIterative" file="EventWeightsIterative.cc">
 </bin>
+
+<bin   name="EventWeightsIterativeZJets" file="EventWeightsIterativeZJets.cc">
+</bin>

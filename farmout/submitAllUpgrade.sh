@@ -1,6 +1,6 @@
 #!/bin/sh
 #voms-proxy-init --voms cms --valid 100:00
-jobID=2017_Oct6_Upgrade
+jobID=2017_Nov11_Upgrade
 
 cat $CMSSW_BASE/src/PUAnalysis/TT-MC-Up.py > SUB.py
 cat submit.py >>SUB.py
@@ -9,21 +9,22 @@ jobOptions="--vsize-limit=8000  --input-files-per-job=1 --assume-input-files-exi
 tailOptions="  $CMSSW_BASE $CMSSW_BASE/src/PUAnalysis/farmout/SUB.py"
 
 #farmoutAnalysisJobs  $1 $jobOptions --input-file-list=GGH_200PU.txt         --input-basenames-not-unique    ${jobID}_GGH_200PU     $tailOptions
+farmoutAnalysisJobs  $1 $jobOptions --input-file-list=samples_93X/VBF_PU200.txt         --input-basenames-not-unique    ${jobID}_VBF_200PU     $tailOptions
+farmoutAnalysisJobs  $1 $jobOptions --input-file-list=samples_93X/VBF_PU0.txt           --input-basenames-not-unique    ${jobID}_VBF_0PU       $tailOptions
+exit;
+
+farmoutAnalysisJobs  $1 $jobOptions --input-file-list=samples_93X/DY0Jets_PU200.txt     --input-basenames-not-unique    ${jobID}_DYJets_200PU  $tailOptions
+farmoutAnalysisJobs  $1 $jobOptions --input-file-list=samples_93X/DY0Jets_PU0.txt       --input-basenames-not-unique    ${jobID}_DYJets_0PU    $tailOptions
+
+farmoutAnalysisJobs  $1 $jobOptions --input-file-list=samples_93X/TTbar_PU200.txt       --input-basenames-not-unique    ${jobID}_TTbar_200PU   $tailOptions
+farmoutAnalysisJobs  $1 $jobOptions --input-file-list=samples_93X/TTbar_PU0.txt         --input-basenames-not-unique    ${jobID}_TTbar_0PU     $tailOptions
 
 
-farmoutAnalysisJobs  $1 $jobOptions --input-file-list=DYJetsToLL_200PU.txt  --input-basenames-not-unique    ${jobID}_DYJets_200PU  $tailOptions
-farmoutAnalysisJobs  $1 $jobOptions --input-file-list=DYJetsToLL_0PU.txt    --input-basenames-not-unique    ${jobID}_DYJets_0PU    $tailOptions
+farmoutAnalysisJobs  $1 $jobOptions --input-file-list=samples_93X/GGH_PU200.txt         --input-basenames-not-unique    ${jobID}_GGH_200PU     $tailOptions
+farmoutAnalysisJobs  $1 $jobOptions --input-file-list=samples_93X/GGH_PU0.txt           --input-basenames-not-unique    ${jobID}_GGH_0PU       $tailOptions
 
-farmoutAnalysisJobs  $1 $jobOptions --input-file-list=TTbar_200PU.txt       --input-basenames-not-unique    ${jobID}_TTbar_200PU   $tailOptions
-farmoutAnalysisJobs  $1 $jobOptions --input-file-list=TTbar_0PU.txt         --input-basenames-not-unique    ${jobID}_TTbar_0PU     $tailOptions
-
-farmoutAnalysisJobs  $1 $jobOptions --input-file-list=VBF_200PU.txt         --input-basenames-not-unique    ${jobID}_VBF_200PU     $tailOptions
-farmoutAnalysisJobs  $1 $jobOptions --input-file-list=VBF_0PU.txt           --input-basenames-not-unique    ${jobID}_VBF_0PU       $tailOptions
-
-farmoutAnalysisJobs  $1 $jobOptions --input-file-list=GGH_200PU.txt         --input-basenames-not-unique    ${jobID}_GGH_200PU     $tailOptions
-farmoutAnalysisJobs  $1 $jobOptions --input-file-list=GGH_0PU.txt           --input-basenames-not-unique    ${jobID}_GGH_0PU       $tailOptions
-
-farmoutAnalysisJobs  $1 $jobOptions --input-file-list=QCD_200PU.txt         --input-basenames-not-unique    ${jobID}_QCD_200PU     $tailOptions
+farmoutAnalysisJobs  $1 $jobOptions --input-file-list=samples_93X/QCD_PU200.txt         --input-basenames-not-unique    ${jobID}_QCD_200PU     $tailOptions
+farmoutAnalysisJobs  $1 $jobOptions --input-file-list=samples_93X/QCD_PU0.txt           --input-basenames-not-unique    ${jobID}_QCD_0PU       $tailOptions
 
 #farmoutAnalysisJobs  $1 $jobOptions --input-dbs-path=/DYJetsToLL_M-50_TuneCUETP8M1_14TeV-madgraphMLM-pythia8/PhaseIITDRSpring17MiniAOD-PU200_91X_upgrade2023_realistic_v3-v1/MINIAODSIM     ${jobID}_DYJets_200PU  $tailOptions
 #farmoutAnalysisJobs  $1 $jobOptions --input-dbs-path=/DYJetsToLL_M-50_TuneCUETP8M1_14TeV-madgraphMLM-pythia8/PhaseIITDRSpring17MiniAOD-noPU_91X_upgrade2023_realistic_v3-v1/MINIAODSIM      ${jobID}_DYJets_noPU  $tailOptions

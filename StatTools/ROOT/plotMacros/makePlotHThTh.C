@@ -44,8 +44,8 @@ void makeDiTauStack(TString name,TString file,TString dir,int s,TString labelX,T
 	extraText  = "Preliminary";  // default extra text is "Preliminary"
 	lumi_8TeV  = "19.1 fb^{-1}"; // default is "19.7 fb^{-1}"
 	lumi_7TeV  = "4.9 fb^{-1}";  // default is "5.1 fb^{-1}"
-	lumi_sqrtS = "13 TeV";
-	if (json=="Golden") lumi_13TeV = channel+"    100 fb^{-1}, 2016";
+	lumi_sqrtS = "14 TeV";
+	if (json=="Golden") lumi_13TeV = channel+"    3000 fb^{-1}, HL-LHC";
 
 	int iPeriod = 4;    // 1=7TeV, 2=8TeV, 3=7+8TeV, 7=7+8+13TeV 
 
@@ -87,35 +87,36 @@ void makeDiTauStack(TString name,TString file,TString dir,int s,TString labelX,T
 	}
 
 	c->cd();
-	/*
+	TPad * plotPad;
+	TPad * ratioPad;
 	if(doRatio){
-		TPad * plotPad = new TPad("pad1","",0.0016,0.291,1.0,1.0);
-		plotPad->SetTicks(0,0);
-		plotPad->SetLeftMargin  (L/W);
-		plotPad->SetRightMargin (R/W);
-		plotPad->SetTopMargin   (T/H);
-		plotPad->SetBottomMargin(B_ratio/H); 
-		plotPad->SetFillColor(0);
-		plotPad->SetBottomMargin(0);
-
-		TPad * ratioPad = new TPad("pad2","",0.0,0.0,1.0,0.29);
-		ratioPad->SetLeftMargin  (L/W);
-		ratioPad->SetRightMargin (R/W);
-		ratioPad->SetTopMargin   (T_ratio/H);
-		ratioPad->SetTopMargin   (0.007);
-		ratioPad->SetBottomMargin(B_ratio_label/H);
-		ratioPad->SetGridy(1);
-		ratioPad->SetFillColor(4000);
-
+	  plotPad = new TPad("pad1","",0.0016,0.291,1.0,1.0);
+	  plotPad->SetTicks(0,0);
+	  plotPad->SetLeftMargin  (L/W);
+	  plotPad->SetRightMargin (R/W);
+	  plotPad->SetTopMargin   (T/H);
+	  plotPad->SetBottomMargin(B_ratio/H); 
+	  plotPad->SetFillColor(0);
+	  plotPad->SetBottomMargin(0);
+	  
+	  ratioPad = new TPad("pad2","",0.0,0.0,1.0,0.29);
+	  ratioPad->SetLeftMargin  (L/W);
+	  ratioPad->SetRightMargin (R/W);
+	  ratioPad->SetTopMargin   (T_ratio/H);
+	  ratioPad->SetTopMargin   (0.007);
+	  ratioPad->SetBottomMargin(B_ratio_label/H);
+	  ratioPad->SetGridy(1);
+	  ratioPad->SetFillColor(4000);
+	  
 	}
-	else{*/
-	TPad * plotPad = new TPad("pad1","",0.0,0.03,1.0,1.0);
-
-		plotPad->SetLeftMargin     (L/W);
-		plotPad->SetRightMargin    (R/W);
-		plotPad->SetTopMargin      (T/H);
-		plotPad->SetBottomMargin   (B/H);
-		//}
+	else{
+	  plotPad = new TPad("pad1","",0.0,0.03,1.0,1.0);
+	  
+	  plotPad->SetLeftMargin     (L/W);
+	  plotPad->SetRightMargin    (R/W);
+	  plotPad->SetTopMargin      (T/H);
+	  plotPad->SetBottomMargin   (B/H);
+	}
 
 	plotPad->Draw();
 	plotPad->cd();
@@ -159,24 +160,24 @@ void makeDiTauStack(TString name,TString file,TString dir,int s,TString labelX,T
 
 	TH1F *signal=0;
 
-
+	TH1F *sm;
 	//more signal styles to be added later
 	if(s==3) {
 		TH1F * SM = (TH1F*)(f->Get(dir+"/ggH125"));
 		TH1F * SMVBF = (TH1F*)(f->Get(dir+"/qqH125"));
-		TH1F *sm = SM;
+		sm = SM;
 		SMVBF->Scale(1); //cross section = 0.236 pb-1
 		sm->Scale(1); // cross section = 2.768 pb-1
 		sm->Add(SMVBF);
 
-		sm->Scale(10); // 5X Standard Model
+		sm->Scale(5); // 5X Standard Model
 	        //TH1F * SM2 = (TH1F*)(f->Get(dir+"/qqH125"));
 		//TH1F *sm2 = SM2;
 		//sm2->Scale(100);//FIXME
 		//sm->Add(sm2);
 		sm->SetLineStyle(2);
 
-		signal=sm;
+		signal= (TH1F*)sm->Clone("ggH125");
 
 		if (dndm) convertToDNDM(signal);
 
@@ -209,23 +210,36 @@ void makeDiTauStack(TString name,TString file,TString dir,int s,TString labelX,T
 	//  else {
 	//  hs->Add(MSSM);
 
-
-
+	TH1F* errorBand = (TH1F*)ttbar->Clone();
+	//errorBand->Add(EWK);
+	errorBand->Add(ZTT);
+	errorBand->Add(QCD);
+	errorBand->Add(ZEE);
+	
+	errorBand->SetMarkerSize(0);
+	errorBand->SetFillColor(kGray+2);
+	errorBand->SetFillStyle(3001);
+	errorBand->SetLineWidth(1);
+	
+	
 	hs->Draw("HIST");
+	signal->Draw("HIST,SAME");
+	//errorBand->Draw("e2same");
 	hs->SetMaximum(hs->GetMaximum()*1.8);
 
 	hs->Draw("HIST");
+	signal->Draw("HIST,SAME");
 
-	//if(doRatio){
-	//	hs->GetXaxis()->SetLabelSize(0);
-		//}
-		//else
-		//{
+	if(doRatio){
+		hs->GetXaxis()->SetLabelSize(0);
+	}
+	else
+	{
 		if(units!="")
 			hs->GetXaxis()->SetTitle(labelX+" ["+units+"]");
 		else
 			hs->GetXaxis()->SetTitle(labelX);
-		//}
+	}
 
 	hs->GetYaxis()->SetTitle("Events");
 	hs->GetYaxis()->SetTitleOffset(1.2);
@@ -233,14 +247,72 @@ void makeDiTauStack(TString name,TString file,TString dir,int s,TString labelX,T
 	if(dndm)
 		hs->GetYaxis()->SetTitle("dN/d"+labelX);
 
-	if(s>0)
-		signal->Draw("HIST,SAME");
+	//if(s>0)
+	//signal->Draw("HIST,SAME");
 
 
 
 
 	c->cd();
+    if(doRatio){
+      TH1F * signal_r = sm;
+      signal_r->SetLineWidth(2);
+      signal_r->Scale(0.2);
+      TH1F * mcErr = (TH1F*) errorBand->Clone("errorBand");
+	
+      mcErr->SetMarkerSize(0);
+      mcErr->SetFillColor(kGray+2);
+      mcErr->SetFillStyle(3001);
+      mcErr->SetLineWidth(1);
 
+      
+      TH1F * mc = (TH1F*)(ttbar);
+      mc->Add(QCD);
+      //mc->Add(EWK);
+      mc->Add(ZTT);
+      mc->Add(ZEE);
+      mc->Add(signal_r);
+      //if (channel =="#tau_{#mu}#tau_{h}") mc->Add(ZEE);
+
+      double xmin = mc->GetXaxis()->GetXmin();
+      double xmax = mc->GetXaxis()->GetXmax();
+      TLine *line = new TLine(xmin,0.0,xmax,0.0);
+      line->SetLineWidth(1);
+      line->SetLineColor(kBlack);
+      
+      ratioPad->Draw();
+      ratioPad->cd();
+      
+      signal_r->Divide(signal_r,mc);
+      mcErr->Divide(mcErr,mcErr);
+
+      signal_r->SetMarkerStyle(20);
+      signal_r->SetTitleSize  (0.12,"Y");
+        signal_r->SetTitleOffset(0.40,"Y");
+        signal_r->SetTitleSize  (0.12,"X");
+        signal_r->SetLabelSize  (0.10,"X");
+        signal_r->SetLabelSize  (0.08,"Y");
+        signal_r->GetYaxis()->SetRangeUser(0,0.32);
+        //signal_r->GetYaxis()->SetRangeUser(0.62,1.38);
+        signal_r->GetYaxis()->SetNdivisions(305);
+        signal_r->GetYaxis()->SetTitle("S/(S+B)   ");
+
+        //What does this do
+        //->this affects the stat box style
+        //gStyle->SetOptTitle(0);
+
+
+        if (units!="")
+            signal_r->GetXaxis()->SetTitle(labelX+" ["+units+"]");
+        else
+            signal_r->GetXaxis()->SetTitle(labelX);
+
+        signal_r->Draw("P");
+        //mcErr->Draw("E2Same");
+        signal_r->Draw("PSame");
+        line->Draw();
+
+    }
 	c->cd();
 	plotPad->cd(); 
 
@@ -259,11 +331,11 @@ void makeDiTauStack(TString name,TString file,TString dir,int s,TString labelX,T
 
 	if(log){
 		if(s==3)
-			l->AddEntry(signal,"10xSM H(125)#rightarrow#tau#tau","L");
+			l->AddEntry(signal,"5xSM H(125)#rightarrow#tau#tau","L");
 	}
 	else{
 		if(s==3)
-			l->AddEntry(signal,"10xSM H(125)#rightarrow#tau#tau","F");
+			l->AddEntry(signal,"5xSM H(125)#rightarrow#tau#tau","F");
 	}
 
 	l->SetBorderSize(0);
@@ -291,6 +363,7 @@ void makeDiTauStack(TString name,TString file,TString dir,int s,TString labelX,T
 		offsetF=yL/2.;
 		offsetFF=yL/5.;
 
+		hs->SetMinimum(400);
 	}
 
 	//now in CMS_lumi

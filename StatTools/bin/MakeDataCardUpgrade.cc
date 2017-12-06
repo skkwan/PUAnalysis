@@ -70,6 +70,7 @@ int main (int argc, char* argv[])
 	parser.addOption("vvErr",optutl::CommandLineParser::kDouble,"DiBoson RelativeError",0.3);   
 	parser.addOption("zlftErr",optutl::CommandLineParser::kDouble,"Z Muon fakes tau error",0.25);
 	parser.addOption("zJFTErr",optutl::CommandLineParser::kDouble,"Z Jet fakes tau Error",0.2);
+	parser.addOption("zllScale",optutl::CommandLineParser::kDouble,"Zll scale",1.00);
 	parser.addOption("zttScale",optutl::CommandLineParser::kDouble,"Z tau tau scale",1.00);
 	parser.addOption("zttScaleErr",optutl::CommandLineParser::kDouble,"Z tau tau scale error",0.033);
 	parser.addOption("muID",optutl::CommandLineParser::kDouble,"Mu ID",1.0);
