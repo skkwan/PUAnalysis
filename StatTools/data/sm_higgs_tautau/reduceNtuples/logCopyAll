@@ -1,0 +1,199 @@
+
+Processing copyAll.C...
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.so, output: $ROOTSYS/test/libEvent.so
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.so, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.so
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.so, output: /usr/lib64/root/$ROOTSYS/test/libEvent.so
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.so, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.so
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.so, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.so
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.dll, output: $ROOTSYS/test/libEvent.dll
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dll, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dll
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.dll, output: /usr/lib64/root/$ROOTSYS/test/libEvent.dll
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dll, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dll
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dll, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dll
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.dylib, output: $ROOTSYS/test/libEvent.dylib
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dylib, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dylib
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.dylib, output: /usr/lib64/root/$ROOTSYS/test/libEvent.dylib
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dylib, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dylib
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dylib, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dylib
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.sl, output: $ROOTSYS/test/libEvent.sl
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.sl, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.sl
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.sl, output: /usr/lib64/root/$ROOTSYS/test/libEvent.sl
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.sl, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.sl
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.sl, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.sl
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.dl, output: $ROOTSYS/test/libEvent.dl
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dl, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dl
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.dl, output: /usr/lib64/root/$ROOTSYS/test/libEvent.dl
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dl, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dl
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dl, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dl
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.a, output: $ROOTSYS/test/libEvent.a
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.a, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.a
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.a, output: /usr/lib64/root/$ROOTSYS/test/libEvent.a
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.a, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.a
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.a, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.a
+Error in <TUnixSystem::DynamicPathName>: $ROOTSYS/test/libEvent[.so | .dll | .dylib | .sl | .dl | .a] does not exist in .:/usr/lib64/root::/usr/lib64/root/cint/cint/stl
+here1
+here2
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.so, output: $ROOTSYS/test/libEvent.so
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.so, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.so
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.so, output: /usr/lib64/root/$ROOTSYS/test/libEvent.so
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.so, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.so
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.so, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.so
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.dll, output: $ROOTSYS/test/libEvent.dll
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dll, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dll
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.dll, output: /usr/lib64/root/$ROOTSYS/test/libEvent.dll
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dll, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dll
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dll, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dll
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.dylib, output: $ROOTSYS/test/libEvent.dylib
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dylib, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dylib
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.dylib, output: /usr/lib64/root/$ROOTSYS/test/libEvent.dylib
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dylib, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dylib
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dylib, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dylib
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.sl, output: $ROOTSYS/test/libEvent.sl
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.sl, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.sl
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.sl, output: /usr/lib64/root/$ROOTSYS/test/libEvent.sl
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.sl, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.sl
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.sl, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.sl
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.dl, output: $ROOTSYS/test/libEvent.dl
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dl, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dl
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.dl, output: /usr/lib64/root/$ROOTSYS/test/libEvent.dl
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dl, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dl
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dl, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dl
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.a, output: $ROOTSYS/test/libEvent.a
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.a, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.a
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.a, output: /usr/lib64/root/$ROOTSYS/test/libEvent.a
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.a, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.a
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.a, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.a
+Error in <TUnixSystem::DynamicPathName>: $ROOTSYS/test/libEvent[.so | .dll | .dylib | .sl | .dl | .a] does not exist in .:/usr/lib64/root::/usr/lib64/root/cint/cint/stl
+here1
+here2
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.so, output: $ROOTSYS/test/libEvent.so
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.so, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.so
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.so, output: /usr/lib64/root/$ROOTSYS/test/libEvent.so
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.so, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.so
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.so, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.so
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.dll, output: $ROOTSYS/test/libEvent.dll
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dll, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dll
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.dll, output: /usr/lib64/root/$ROOTSYS/test/libEvent.dll
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dll, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dll
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dll, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dll
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.dylib, output: $ROOTSYS/test/libEvent.dylib
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dylib, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dylib
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.dylib, output: /usr/lib64/root/$ROOTSYS/test/libEvent.dylib
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dylib, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dylib
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dylib, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dylib
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.sl, output: $ROOTSYS/test/libEvent.sl
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.sl, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.sl
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.sl, output: /usr/lib64/root/$ROOTSYS/test/libEvent.sl
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.sl, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.sl
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.sl, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.sl
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.dl, output: $ROOTSYS/test/libEvent.dl
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dl, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dl
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.dl, output: /usr/lib64/root/$ROOTSYS/test/libEvent.dl
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dl, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dl
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dl, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dl
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.a, output: $ROOTSYS/test/libEvent.a
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.a, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.a
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.a, output: /usr/lib64/root/$ROOTSYS/test/libEvent.a
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.a, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.a
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.a, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.a
+Error in <TUnixSystem::DynamicPathName>: $ROOTSYS/test/libEvent[.so | .dll | .dylib | .sl | .dl | .a] does not exist in .:/usr/lib64/root::/usr/lib64/root/cint/cint/stl
+here1
+here2
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.so, output: $ROOTSYS/test/libEvent.so
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.so, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.so
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.so, output: /usr/lib64/root/$ROOTSYS/test/libEvent.so
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.so, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.so
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.so, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.so
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.dll, output: $ROOTSYS/test/libEvent.dll
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dll, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dll
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.dll, output: /usr/lib64/root/$ROOTSYS/test/libEvent.dll
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dll, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dll
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dll, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dll
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.dylib, output: $ROOTSYS/test/libEvent.dylib
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dylib, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dylib
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.dylib, output: /usr/lib64/root/$ROOTSYS/test/libEvent.dylib
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dylib, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dylib
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dylib, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dylib
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.sl, output: $ROOTSYS/test/libEvent.sl
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.sl, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.sl
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.sl, output: /usr/lib64/root/$ROOTSYS/test/libEvent.sl
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.sl, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.sl
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.sl, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.sl
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.dl, output: $ROOTSYS/test/libEvent.dl
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dl, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.dl
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.dl, output: /usr/lib64/root/$ROOTSYS/test/libEvent.dl
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dl, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.dl
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dl, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.dl
+Error in <TSystem::ExpandFileName>: input: $ROOTSYS/test/libEvent.a, output: $ROOTSYS/test/libEvent.a
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.a, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/./$ROOTSYS/test/libEvent.a
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/$ROOTSYS/test/libEvent.a, output: /usr/lib64/root/$ROOTSYS/test/libEvent.a
+Error in <TSystem::ExpandFileName>: input: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.a, output: /afs/hep.wisc.edu/cms/ojalvo/HTT_80X/forSam/main/CMSSW_8_0_29/src/PUAnalysis/StatTools/data/sm_higgs_tautau/reduceNtuples/$ROOTSYS/test/libEvent.a
+Error in <TSystem::ExpandFileName>: input: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.a, output: /usr/lib64/root/cint/cint/stl/$ROOTSYS/test/libEvent.a
+Error in <TUnixSystem::DynamicPathName>: $ROOTSYS/test/libEvent[.so | .dll | .dylib | .sl | .dl | .a] does not exist in .:/usr/lib64/root::/usr/lib64/root/cint/cint/stl
+here1
+
+ *** Break *** segmentation violation
+
+
+
+===========================================================
+There was a crash.
+This is the entire stack trace of all threads:
+===========================================================
+#0  0x00000031c30ac82e in waitpid () from /lib64/libc.so.6
+#1  0x00000031c303e479 in do_system () from /lib64/libc.so.6
+#2  0x00000031c506ab04 in TUnixSystem::StackTrace() () from /usr/lib64/root/libCore.so.5.34
+#3  0x00000031c5069f23 in TUnixSystem::DispatchSignals(ESignals) () from /usr/lib64/root/libCore.so.5.34
+#4  <signal handler called>
+#5  0x00000031c64b5354 in TBufferFile::ReadFloat(float&) () from /usr/lib64/root/libRIO.so
+#6  0x00007f41b2ce0a31 in TBranch::GetEntry(long long, int) () from /usr/lib64/root/libTree.so
+#7  0x00007f41b2d35c88 in TTree::GetEntry(long long, int) () from /usr/lib64/root/libTree.so
+#8  0x00007f41b10d0883 in TTreePlayer::CopyTree(char const*, char const*, long long, long long) () from /usr/lib64/root/libTreePlayer.so
+#9  0x00007f41b2d6d1cc in ?? () from /usr/lib64/root/libTree.so
+#10 0x00000031c444dba9 in Cint::G__ExceptionWrapper(int (*)(G__value*, char const*, G__param*, int), G__value*, char*, G__param*, int) () from /usr/lib64/root/libCint.so.5.34
+#11 0x00000031c44f5ed1 in G__execute_call () from /usr/lib64/root/libCint.so.5.34
+#12 0x00000031c44f6d22 in G__call_cppfunc () from /usr/lib64/root/libCint.so.5.34
+#13 0x00000031c44d5a05 in G__interpret_func () from /usr/lib64/root/libCint.so.5.34
+#14 0x00000031c44c48b9 in G__getfunction () from /usr/lib64/root/libCint.so.5.34
+#15 0x00000031c45a9071 in G__getstructmem(int, G__FastAllocString&, char*, int, char*, int*, G__var_array*, int) () from /usr/lib64/root/libCint.so.5.34
+#16 0x00000031c45a180a in G__getvariable () from /usr/lib64/root/libCint.so.5.34
+#17 0x00000031c44a29ad in G__getitem () from /usr/lib64/root/libCint.so.5.34
+#18 0x00000031c44a7cb8 in G__getexpr () from /usr/lib64/root/libCint.so.5.34
+#19 0x00000031c449310e in G__define_var () from /usr/lib64/root/libCint.so.5.34
+#20 0x00000031c4521fad in G__exec_statement () from /usr/lib64/root/libCint.so.5.34
+#21 0x00000031c44d6dd9 in G__interpret_func () from /usr/lib64/root/libCint.so.5.34
+#22 0x00000031c44c4918 in G__getfunction () from /usr/lib64/root/libCint.so.5.34
+#23 0x00000031c44a312e in G__getitem () from /usr/lib64/root/libCint.so.5.34
+#24 0x00000031c44a7cb8 in G__getexpr () from /usr/lib64/root/libCint.so.5.34
+#25 0x00000031c4522be7 in G__exec_statement () from /usr/lib64/root/libCint.so.5.34
+#26 0x00000031c44d6dd9 in G__interpret_func () from /usr/lib64/root/libCint.so.5.34
+#27 0x00000031c44c4918 in G__getfunction () from /usr/lib64/root/libCint.so.5.34
+#28 0x00000031c44a312e in G__getitem () from /usr/lib64/root/libCint.so.5.34
+#29 0x00000031c44a7cb8 in G__getexpr () from /usr/lib64/root/libCint.so.5.34
+#30 0x00000031c44b11c8 in G__calc_internal () from /usr/lib64/root/libCint.so.5.34
+#31 0x00000031c4530275 in G__process_cmd () from /usr/lib64/root/libCint.so.5.34
+#32 0x00000031c502ac46 in TCint::ProcessLine(char const*, TInterpreter::EErrorCode*) () from /usr/lib64/root/libCore.so.5.34
+#33 0x00000031c50283b3 in TCint::ProcessLineSynch(char const*, TInterpreter::EErrorCode*) () from /usr/lib64/root/libCore.so.5.34
+#34 0x00000031c4f8f126 in TApplication::ExecuteFile(char const*, int*, bool) () from /usr/lib64/root/libCore.so.5.34
+#35 0x00000031c4f8e5d3 in TApplication::ProcessLine(char const*, bool, int*) () from /usr/lib64/root/libCore.so.5.34
+#36 0x00000031c5813811 in TRint::Run(bool) () from /usr/lib64/root/libRint.so.5.34
+#37 0x000000000040103c in main ()
+===========================================================
+
+
+The lines below might hint at the cause of the crash.
+If they do not help you then please submit a bug report at
+http://root.cern.ch/bugs. Please post the ENTIRE stack trace
+from above as an attachment in addition to anything else
+that might help us fixing this issue.
+===========================================================
+#5  0x00000031c64b5354 in TBufferFile::ReadFloat(float&) () from /usr/lib64/root/libRIO.so
+#6  0x00007f41b2ce0a31 in TBranch::GetEntry(long long, int) () from /usr/lib64/root/libTree.so
+#7  0x00007f41b2d35c88 in TTree::GetEntry(long long, int) () from /usr/lib64/root/libTree.so
+#8  0x00007f41b10d0883 in TTreePlayer::CopyTree(char const*, char const*, long long, long long) () from /usr/lib64/root/libTreePlayer.so
+#9  0x00007f41b2d6d1cc in ?? () from /usr/lib64/root/libTree.so
+===========================================================
+
+
+Function copyAll() busy flag cleared
+Function copyNtuples() busy flag cleared
