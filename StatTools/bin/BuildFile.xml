@@ -6,6 +6,9 @@
 <use   name="HiggsAnalysis/CombinedLimit"/>
 <use   name="PUAnalysis/DataFormats"/>
 
+<bin   name="MakeDataCardHTT" file="MakeDataCardHTT.cc">
+</bin>
+
 <bin   name="MakeDataCardUpgrade" file="MakeDataCardUpgrade.cc">
 </bin>
 
