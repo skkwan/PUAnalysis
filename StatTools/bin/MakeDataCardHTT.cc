@@ -49,7 +49,7 @@ int main (int argc, char* argv[])
 	parser.addOption("weight",optutl::CommandLineParser::kString,"Weight for MC (Multiply Weight Factors here for efficiencies)","__WEIGHT__");
 	parser.addOption("Zweight",optutl::CommandLineParser::kString,"Weight DY MC for ZPt reweighting","__ZWEIGHT__");
 	parser.addOption("TTweight",optutl::CommandLineParser::kString,"Weight DY MC for ZPt reweighting","topWeight");
-	parser.addOption("zlftFactor",optutl::CommandLineParser::kString,"Z Muon fakes tau error","MuTauFake");
+	parser.addOption("zlftFactor",optutl::CommandLineParser::kString,"Z Muon fakes tau error","1");
 	parser.addOption("embWeight",optutl::CommandLineParser::kString,"Weight for Embedded","__CORR__");
 	parser.addOption("min",optutl::CommandLineParser::kDouble,"Minimum value",0.);
 	parser.addOption("max",optutl::CommandLineParser::kDouble,"Maximum Value ",500.);
