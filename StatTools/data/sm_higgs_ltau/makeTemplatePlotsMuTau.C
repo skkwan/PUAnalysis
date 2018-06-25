@@ -2,6 +2,7 @@
 
 
 void makeTemplatePlotsMuTau(){
+   makeLTauStack("~/www/ztt/2017/MuTau/SM_Plots/muTau_m_vis","muTauPlots/muTau_m_vis.root","mt_inclusive",3,"visible mass","GeV",false,"#tau_{#mu}#tau_{h}","Golden",false,false,true);
    makeLTauStack("~/www/ztt/2016/MuTau/SM_Plots/muTau_eta_1","muTauPlots/muTau_eta_1.root","mt_inclusive",3,"#eta_{#mu}","",false,"#tau_{#mu}#tau_{h}","Golden",false,false,true);
    makeLTauStack("~/www/ztt/2016/MuTau/SM_Plots/muTau_eta_1_30","muTauPlots/muTau_eta_1_30.root","mt_inclusive",3,"#eta_{#mu} taupt>30","",false,"#tau_{#mu}#tau_{h}","Golden",false,false,true);
    makeLTauStack("~/www/ztt/2016/MuTau/SM_Plots/muTau_eta_2","muTauPlots/muTau_eta_2.root","mt_inclusive",3,"#eta_{#tau}","",false,"#tau_{#mu}#tau_{h}","Golden",false,false,true);

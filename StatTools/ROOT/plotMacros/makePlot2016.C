@@ -49,11 +49,11 @@ void makeLTauStack(TString name,TString file,TString dir,int s,TString labelX,TS
     lumi_sqrtS = "13 TeV";
     TString clab = "#mu#tau_{h}";
     if (json=="17") lumi_13TeV = clab+"     11.62 fb^{-1}  2017";
-    if (json=="Golden") lumi_13TeV = clab+"     35.9 fb^{-1}";
-    if (json=="incl") lumi_13TeV = clab+"     35.9 fb^{-1}";
-    if (json=="0jet") lumi_13TeV = "0-Jet   "+clab+"     35.9 fb^{-1}";
-    if (json=="boosted") lumi_13TeV = "Boosted   "+clab+"     35.9 fb^{-1}";
-    if (json=="vbf") lumi_13TeV = "VBF  "+clab+"     35.9 fb^{-1}";
+    if (json=="Golden") lumi_13TeV = clab+"     41.1 fb^{-1}";
+    if (json=="incl") lumi_13TeV = clab+"     41.1 fb^{-1}";
+    if (json=="0jet") lumi_13TeV = "0-Jet   "+clab+"     41.1 fb^{-1}";
+    if (json=="boosted") lumi_13TeV = "Boosted   "+clab+"     41.1 fb^{-1}";
+    if (json=="vbf") lumi_13TeV = "VBF  "+clab+"     41.1 fb^{-1}";
 
     int iPeriod = 4;    // 1=7TeV, 2=8TeV, 3=7+8TeV, 7=7+8+13TeV 
 
