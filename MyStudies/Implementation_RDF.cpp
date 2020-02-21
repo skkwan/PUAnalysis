@@ -1,10 +1,10 @@
+/******************************************************/
+/* Implementation_RDF.cpp                             */
+/* Usage: root -l Implementation_RDF.cpp              */
+/******************************************************/
 
-using FourVector = ROOT::Math::XYZTVector;
-using FourVectorVec = std::vector<FourVector>;
-using FourVectorRVec = ROOT::VecOps::RVec<FourVector>;
-using CylFourVector = ROOT::Math::RhoEtaPhiVector;
 
-
+/******************************************************/
 
 int Implementation_RDF()
 {
@@ -18,22 +18,17 @@ int Implementation_RDF()
   ROOT::RDataFrame d(treeName, fileName, {"m_sv"});
   
   // Example of a simple cut
-  //  auto massCut = [](float m_sv){return m_sv > 0;};
-  //  auto h1 = d.Filter(mass_cut, {"m_sv"});
-
-  // Alternatively,
   auto cut = d.Filter("m_sv > 0");
   auto nEntries = cut.Count();
   std::cout << *nEntries << " passed all filters" << std::endl;
-
-  
 
   // Draw the results
   auto hCut = cut.Histo1D("m_sv");
   auto c = new TCanvas();
   hCut->DrawCopy();
 
-  
-  
   return 0;
 }
+
+
+/******************************************************/
